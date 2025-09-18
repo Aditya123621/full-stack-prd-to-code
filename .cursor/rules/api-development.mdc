@@ -1,0 +1,40 @@
+---
+description: API development guidelines and security practices for TaskMaster
+globs: ["**/api/**/*.ts", "**/app/api/**/*.ts"]
+alwaysApply: true
+---
+
+# API Development Guidelines
+
+## API Structure
+- Use Next.js API routes for backend functionality
+- Follow RESTful API conventions
+- Implement proper HTTP status codes
+- Use consistent response formats
+
+## Validation & Security
+- Use Zod for request/response validation
+- Validate all user inputs using Zod schemas
+- Implement proper authentication checks
+- Use environment variables for sensitive data
+- Follow OWASP security guidelines
+- Implement CSRF protection
+- Implement rate limiting for API endpoints
+
+## Error Handling
+- Implement proper error handling with try-catch blocks
+- Return consistent error response formats
+- Log errors appropriately without exposing sensitive data
+- Provide meaningful error messages to clients
+
+## Performance
+- API responses must be under 500ms
+- Implement proper caching strategies
+- Use database connection pooling
+- Optimize database queries
+
+## Supabase Integration
+- Use Supabase client for database operations
+- Implement Row Level Security (RLS) policies
+- Follow Supabase best practices for real-time subscriptions
+- Use Supabase Auth for authentication verification

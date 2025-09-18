@@ -1,0 +1,47 @@
+---
+description: Code quality standards and TypeScript best practices for TaskMaster
+globs: ["**/*.ts", "**/*.tsx"]
+alwaysApply: true
+---
+
+# Code Quality Standards
+
+## TypeScript Requirements
+- Use strict TypeScript configuration
+- Define proper interfaces and types for all data structures
+- Avoid `any` type - use proper typing or `unknown`
+- Use generic types where appropriate
+- Export types and interfaces from dedicated files
+
+## Component Architecture
+- Create reusable components in `/components` directory
+- Use composition over inheritance
+- Implement proper prop interfaces with TypeScript
+- Follow single responsibility principle
+- Use React.memo() for performance optimization when needed
+
+## File Structure
+```
+/src
+  /app                 # Next.js App Router pages
+  /components          # Reusable UI components
+    /ui               # Basic UI components (buttons, inputs)
+    /features         # Feature-specific components
+  /lib                 # Utility functions and configurations
+  /store              # Redux store configuration
+  /types              # TypeScript type definitions
+  /hooks              # Custom React hooks
+  /utils              # Helper functions
+```
+
+## Naming Conventions
+- camelCase for variables and functions
+- PascalCase for components and types
+- UPPER_CASE for constants
+- kebab-case for file names
+
+## Error Handling
+- Implement global error boundaries
+- Provide meaningful error messages to users
+- Log errors to Sentry with proper context
+- Implement retry mechanisms for failed operations

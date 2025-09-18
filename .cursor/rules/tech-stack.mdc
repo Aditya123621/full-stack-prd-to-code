@@ -1,0 +1,46 @@
+---
+description: Enforce the specified tech stack for TaskMaster project development
+globs: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
+alwaysApply: true
+---
+
+# TaskMaster Tech Stack Requirements
+
+## Core Framework
+- Use Next.js 14+ with TypeScript for full-stack development
+- Implement App Router (not Pages Router) for all new features
+- Use Server Components by default, Client Components only when necessary
+- Follow Next.js 14+ best practices for performance and SEO
+
+## State Management
+- Use Redux Toolkit (RTK) for global state management
+- Implement RTK Query for API calls and caching
+- Use React hooks (useState, useEffect) for local component state
+- Follow Redux Toolkit patterns: createSlice, createAsyncThunk
+
+## Styling & UI
+- Use Tailwind CSS for all styling - no custom CSS files
+- Implement Headless UI components for accessibility
+- Use Radix UI when Headless UI doesn't provide needed components
+- Follow mobile-first responsive design principles
+- Implement dark/light mode using Tailwind's dark: prefix
+
+## Database & Backend
+- Use Supabase for PostgreSQL database, authentication, and file storage
+- Implement Row Level Security (RLS) policies for data protection
+- Use Supabase client for database operations
+- Follow Supabase best practices for real-time subscriptions
+
+## Caching & Performance
+- Implement Redis for server-side caching (session data, frequently accessed data)
+- Use IndexedDB for client-side offline storage and caching
+- Leverage Next.js built-in caching mechanisms
+
+## Testing
+- Write unit tests using Jest and React Testing Library
+- Write integration tests using Playwright
+- Maintain minimum 80% test coverage
+
+## Monitoring & Analytics
+- Integrate Sentry for error tracking and performance monitoring
+- Use PostHog or Mixpanel for user analytics and feature tracking

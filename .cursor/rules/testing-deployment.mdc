@@ -1,0 +1,49 @@
+---
+description: Testing strategies and deployment guidelines for TaskMaster
+globs: ["**/*.test.ts", "**/*.test.tsx", "**/*.spec.ts", "**/playwright.config.ts"]
+alwaysApply: true
+---
+
+# Testing & Deployment Guidelines
+
+## Testing Strategy
+- Write unit tests using Jest and React Testing Library
+- Write integration tests using Playwright
+- Maintain minimum 80% test coverage
+- Follow testing best practices: arrange, act, assert
+- Mock external dependencies in tests
+- Test accessibility with automated tools
+
+## Test Structure
+- Place unit tests alongside source files with `.test.ts` or `.test.tsx` extension
+- Place integration tests in `/tests` directory
+- Use descriptive test names that explain the behavior being tested
+- Group related tests using `describe` blocks
+
+## Git & Development Workflow
+- Use conventional commit messages (feat:, fix:, docs:, etc.)
+- Create feature branches from main
+- Require pull request reviews before merging
+- Run tests and linting before commits
+- Use Prettier for code formatting
+- Use ESLint for code linting
+
+## Environment Setup
+- Use environment variables for configuration
+- Maintain separate .env files for different environments
+- Never commit sensitive data to version control
+- Use .env.example to document required environment variables
+
+## Deployment
+- Deploy frontend on Vercel
+- Use Supabase for database and backend services
+- Implement proper CI/CD pipelines
+- Run tests in CI before deployment
+- Use staging environment for testing before production
+- Implement proper error monitoring in production
+
+## Documentation
+- Document all public APIs and complex functions
+- Maintain README files for setup instructions
+- Use JSDoc comments for TypeScript functions
+- Keep documentation up to date with code changes

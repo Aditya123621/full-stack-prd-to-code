@@ -1,0 +1,44 @@
+---
+description: Performance requirements and accessibility standards for TaskMaster
+globs: ["**/*.ts", "**/*.tsx", "**/*.css"]
+alwaysApply: true
+---
+
+# Performance & Accessibility Standards
+
+## Performance Requirements
+- Page load time must be under 2 seconds
+- API responses must be under 500ms
+- Implement proper loading states and skeleton screens
+- Use Next.js Image component for optimized images
+- Implement code splitting and lazy loading
+- Leverage Next.js built-in caching mechanisms
+
+## Accessibility (WCAG 2.1 AA Compliance)
+- Use semantic HTML elements
+- Implement proper ARIA labels and roles
+- Ensure keyboard navigation works for all interactive elements
+- Maintain proper color contrast ratios (4.5:1 for normal text, 3:1 for large text)
+- Provide alt text for images
+- Ensure focus indicators are visible
+- Support screen readers with proper markup
+
+## Responsive Design
+- Mobile-first approach using Tailwind breakpoints
+- Test on multiple device sizes (mobile, tablet, desktop)
+- Implement touch-friendly interactions (minimum 44px touch targets)
+- Ensure text remains readable on all screen sizes
+- Use CSS Grid and Flexbox through Tailwind classes
+
+## Offline Functionality
+- Use IndexedDB for offline data storage
+- Implement sync mechanisms when online
+- Provide clear offline/online status indicators
+- Handle conflicts when syncing data
+- Cache critical resources for offline use
+
+## Monitoring
+- Implement Web Vitals monitoring
+- Track Core Web Vitals (LCP, FID, CLS)
+- Monitor bundle sizes and performance metrics
+- Set up alerts for performance degradation

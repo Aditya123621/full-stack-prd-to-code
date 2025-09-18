@@ -30,10 +30,16 @@ export function useTheme() {
   }, [theme]);
 
   const toggleTheme = () => {
-    const themes = ['light', 'dark', 'system'] as const;
-    const currentIndex = themes.indexOf(theme);
-    const nextIndex = (currentIndex + 1) % themes.length;
-    dispatch(setTheme(themes[nextIndex]));
+    const themes = ['light', 'dark'] as const;
+    const currentIndex = themes.indexOf(theme as 'light' | 'dark');
+    // If current theme is 'system' or not found, default to switching to opposite of system preference
+    if (currentIndex === -1) {
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      dispatch(setTheme(systemPrefersDark ? 'light' : 'dark'));
+    } else {
+      const nextIndex = (currentIndex + 1) % themes.length;
+      dispatch(setTheme(themes[nextIndex]));
+    }
   };
 
   const setThemeMode = (newTheme: 'light' | 'dark' | 'system') => {

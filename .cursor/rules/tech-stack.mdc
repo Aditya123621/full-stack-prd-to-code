@@ -7,10 +7,10 @@ alwaysApply: true
 # TaskMaster Tech Stack Requirements
 
 ## Core Framework
-- Use Next.js 14+ with TypeScript for full-stack development
+- Use Next.js 15+ with TypeScript for full-stack development
 - Implement App Router (not Pages Router) for all new features
 - Use Server Components by default, Client Components only when necessary
-- Follow Next.js 14+ best practices for performance and SEO
+- Follow Next.js 15+ best practices for performance and SEO
 
 ## State Management
 - Use Redux Toolkit (RTK) for global state management
